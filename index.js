@@ -23,6 +23,14 @@ app.post("/tweets", (req, res) => {
     res.send("OK");
 });
 
+app.get("sign-up", (req, res) => {
+    res.send(users);
+});
+
+app.get("/tweets", (req, res) => {
+    res.send(tweets.slice(-10));
+});
+
 app.listen(5000, () => {
     console.log("App is running in port: 5000")
 });
